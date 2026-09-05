@@ -1,0 +1,77 @@
+{
+  "project": {
+    "name": "giga-eyes",
+    "version": "0.2.0",
+    "description": "Visual observation and UI debugging tool"
+  },
+
+  "paths": {
+    "project_root": ".",
+    "bin_dir": "bin",
+    "models_dir": "models",
+    "config_dir": "config",
+    "storage_dir": "screenshots",
+    "logs_dir": "logs"
+  },
+
+  "models": {
+    "ocr": {
+      "model": "models/OCR/glm-ocr-q8_0.gguf",
+      "mmproj": "models/OCR/mmproj-glm-ocr-q8_0.gguf",
+      "prompt": "Text Recognition:"
+    },
+    "vision": {
+      "model": "models/VISION/smolvlm2-2.2b-q4_k_m.gguf",
+      "mmproj": "models/VISION/mmproj-smolvlm2-2.2b-q8_0.gguf"
+    },
+    "yolo": {
+      "model": "models/YOLO/yolo26n-q8_0.gguf"
+    }
+  },
+
+  "capture": {
+    "default_fps": 10,
+    "max_fps": 60,
+    "screenshot_format": "numpy",
+    "window_find_timeout": 5
+  },
+
+  "storage": {
+    "path": "screenshots",
+    "format": "png",
+    "jpg_quality": 95
+  },
+
+  "analysis": {
+    "ocr": {
+      "confidence_threshold": 0.3
+    },
+    "color": {
+      "default_tolerance": 20
+    },
+    "template": {
+      "default_threshold": 0.8,
+      "max_matches": 10
+    },
+    "diff": {
+      "default_threshold": 10
+    },
+    "yolo": {
+      "confidence": 0.25,
+      "tile_size": 640,
+      "overlap_ratio": 0.2,
+      "nms_iou_threshold": 0.5
+    }
+  },
+
+  "monitor": {
+    "default_fps": 10,
+    "buffer_size": 30,
+    "auto_save_on_trigger": true
+  },
+
+  "logging": {
+    "level": "INFO",
+    "log_file": "logs/giga_eyes.log"
+  }
+}

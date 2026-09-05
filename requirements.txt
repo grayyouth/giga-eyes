@@ -1,0 +1,11 @@
+mss>=9.0.1
+opencv-python>=4.8.0
+Pillow>=10.0.0
+pywin32>=306
+ultralytics>=8.2.0
+pygetwindow>=0.0.9
+pyyaml>=6.0
+uitag>=0.6.0
+torch>=2.0
+transformers>=4.40
+num2words>=0.5.0

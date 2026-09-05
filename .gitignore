@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+egg-info/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Virtual environments
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Screenshots (runtime data)
+screenshots/*.png
+screenshots/*.jpg
+screenshots/*.bmp
+!screenshots/.gitkeep
+
+# Logs
+logs/
+*.log
+
+# Models (download at runtime)
+models/*.gguf
+models/*.pt
+!models/.gitkeep
+
+# YOLO training outputs
+runs/
+
+# Label Studio artifacts
+label-studio*.log
+label-studio-*.log
+dataset/
+
+# Config files with paths (machine-specific)
+config/llama.json
+
+# Binaries (llama.cpp - large, download separately)
+bin/*.exe
+bin/*.dll
+bin/LICENSE*
+
+# Test artifacts
+test_*.png
+
+# Import scripts (one-time use)
+import_data.csv
+import_data.jsonl
+create_import.py
